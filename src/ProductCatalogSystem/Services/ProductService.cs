@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Microsoft.Extensions.Configuration;
 using ProductCatalogSystem.Core.Interfaces;
 using ProductCatalogSystem.Core.Models;
 using ProductCatalogSystem.Entities;
@@ -12,18 +11,14 @@ namespace ProductCatalogSystem.Core.Services
     public class ProductService : IProductService
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly AppDbContext _db;
         private readonly ILogger _logger;
-        private readonly IConfiguration _config;
         private readonly IMapper _mapper;
 
-        public ProductService(IUnitOfWork unitOfWork, IConfiguration config, IMapper mapper, AppDbContext db)
+        public ProductService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _logger = Log.ForContext<ProductService>();
-            _config = config;
             _mapper = mapper;
-            _db = db;
         }
 
         public Response<string> Delete(string userId,int id)

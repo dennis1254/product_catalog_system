@@ -1,0 +1,12 @@
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\bin\Debug\net6.0\ProductCatalogSystem.Core.deps.json
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\bin\Debug\net6.0\ProductCatalogSystem.Core.dll
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\bin\Debug\net6.0\ProductCatalogSystem.Core.pdb
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\obj\Debug\net6.0\ProductCatalogSystem.Core.csproj.AssemblyReference.cache
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\obj\Debug\net6.0\ProductCatalogSystem.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\obj\Debug\net6.0\ProductCatalogSystem.Core.AssemblyInfoInputs.cache
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\obj\Debug\net6.0\ProductCatalogSystem.Core.AssemblyInfo.cs
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\obj\Debug\net6.0\ProductCatalogSystem.Core.csproj.CoreCompileInputs.cache
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\obj\Debug\net6.0\ProductCatalogSystem.Core.dll
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\obj\Debug\net6.0\refint\ProductCatalogSystem.Core.dll
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\obj\Debug\net6.0\ProductCatalogSystem.Core.pdb
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem\obj\Debug\net6.0\ref\ProductCatalogSystem.Core.dll

@@ -16,8 +16,8 @@ using IAuthenticationService = ProductCatalogSystem.Core.Interfaces.IAuthenticat
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-//builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("database"));
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConn")));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("database"));
+//builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConn")));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddMemoryCache();
