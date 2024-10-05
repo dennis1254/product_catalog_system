@@ -60,7 +60,7 @@ CICD pipeline automates deployment to production
 ## Test or use-cases
 
 - Open `http://localhost:5000/swagger` on your browser
-- Use `gateway` as username and `password10$` as password
+- Use sample request for registration and login to generate jwt token required to access other endpoints
 - Try the endpoints using sample request on the swagger.
 
 ## Version History
