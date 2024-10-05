@@ -77,20 +77,34 @@ namespace ProductCatalogSystem.Core.Services
             }
         }
 
-        public Response<string> Update(UpdateProductRequest request, string userId)
+        public Response<string> Update(int Id, UpdateProductRequest request, string userId)
         {
             try
             {
-                var product = _mapper.Map<Product>(request);
-                product.ModifiedBy = userId;
-                product.ModifiedAt = DateTime.Now;
-                _unitOfWork.ProductRepository.Update(product);
-                _unitOfWork.Save();
-                return new Response<string>
+                var existingProduct = _unitOfWork.ProductRepository.GetById(Id);
+                if (existingProduct != null)
                 {
-                    Success = true,
-                    Message = "Product updated successfully"
-                };
+                    existingProduct.ModifiedBy = userId;
+                    existingProduct.ModifiedAt = DateTime.Now;
+                    existingProduct.Name = request.Name;
+                    existingProduct.Description = request.Description;
+                    _unitOfWork.ProductRepository.Update(existingProduct);
+                    _unitOfWork.Save();
+                    return new Response<string>
+                    {
+                        Success = true,
+                        Message = "Product updated successfully"
+                    };
+                }
+                else
+                {
+                    return new Response<string>
+                    {
+                        Success = false,
+                        Message = $"No existing product with Id - {Id} found"
+                    };
+                }
+               
             }
             catch (Exception ex)
             {

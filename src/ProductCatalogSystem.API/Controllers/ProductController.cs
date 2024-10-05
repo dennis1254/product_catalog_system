@@ -28,12 +28,24 @@ namespace ProductCatalogSystem.API.Controllers
         }
 
         [HttpDelete]
+        [Route("id")]
         [SwaggerOperation(Summary = "remove a product")]
         [SwaggerResponse(StatusCodes.Status200OK, "Request Successful", typeof(Response<string>))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "Bad Request", typeof(CustomBadRequest))]
         public async Task<IActionResult> Delete(int id)
         {
             var resp = _service.Delete(_fullName, id);
+            return Ok(resp);
+
+        }
+        [HttpPut]
+        [Route("id")]
+        [SwaggerOperation(Summary = "update a product")]
+        [SwaggerResponse(StatusCodes.Status200OK, "Request Successful", typeof(Response<string>))]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, "Bad Request", typeof(CustomBadRequest))]
+        public async Task<IActionResult> Update([FromQuery] int id,UpdateProductRequest request)
+        {
+            var resp = _service.Update(id,request, _fullName);
             return Ok(resp);
 
         }
@@ -53,7 +65,7 @@ namespace ProductCatalogSystem.API.Controllers
         [SwaggerOperation(Summary = "get product by id")]
         [SwaggerResponse(StatusCodes.Status200OK, "Request Successful", typeof(Response<Product>))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "Bad Request", typeof(CustomBadRequest))]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             var resp = _service.GetById(id);
             return Ok(resp);

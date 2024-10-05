@@ -1,4 +1,5 @@
-﻿using Swashbuckle.AspNetCore.Annotations;
+﻿using ProductCatalogSystem.Core.CustomAttributes;
+using Swashbuckle.AspNetCore.Annotations;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
@@ -16,6 +17,8 @@ namespace ProductCatalogSystem.Entities
         public int Quantity { get; set; }
 
         [Required]
+        [SwaggerSchema(Description = "Product location")]
+        [SwaggerSchemaExample("Ikeja mall")]
         public string? Location { get; set; } // e.g., Warehouse location
 
         // Foreign key to the Product entity
