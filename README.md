@@ -39,6 +39,10 @@ git clone https://github.com/dennis1254/product_catalog_system.git
 ```
 docker build -t product-catalog-api .
 ```
+or
+```
+docker-compose up --build
+```
 * Run the Docker container:
 ```
 docker run -p 5000:80 product-catalog-api
@@ -55,6 +59,7 @@ CICD pipeline automates deployment to production
 * [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) - The web framework used
 * [MSSQL Server](https://learn.microsoft.com/en-us/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver16) - Application database
 * [Serilog](https://github.com/serilog/serilog/wiki/Getting-Started) - For logging
+* [OpenSearch] (https://opensearch.org/docs/latest/) - Centralize logging sink
 
 
 ## Test or use-cases
@@ -70,6 +75,7 @@ CICD pipeline automates deployment to production
     - POST /api/products: Add a new product.
     - GET /api/products/{id}: Retrieve details of a specific product.
     - PUT /api/products/{id}: Update an existing product.
+	- DELETE /api/products/{id}: Remove a product.
     
   - *Known Issues*
     - N/A

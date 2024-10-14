@@ -50,16 +50,7 @@ namespace ProductCatalogSystem.API.Controllers
 
         }
 
-        [HttpGet]
-        [SwaggerOperation(Summary = "get product list")]
-        [SwaggerResponse(StatusCodes.Status200OK, "Request Successful", typeof(Response<List<Product>>))]
-        [SwaggerResponse(StatusCodes.Status400BadRequest, "Bad Request", typeof(CustomBadRequest))]
-        public async Task<IActionResult> GetAll()
-        {
-            var resp = await _service.GetAll();
-            return Ok(resp);
 
-        }
         [HttpGet]
         [Route("id")]
         [SwaggerOperation(Summary = "get product by id")]
@@ -74,7 +65,7 @@ namespace ProductCatalogSystem.API.Controllers
 
         [HttpGet]
         [Route("pageNumber/pageSize")]
-        [SwaggerOperation(Summary = "get product by id")]
+        [SwaggerOperation(Summary = "get paginated product list")]
         [SwaggerResponse(StatusCodes.Status200OK, "Request Successful", typeof(Response<Product>))]
         [SwaggerResponse(StatusCodes.Status400BadRequest, "Bad Request", typeof(CustomBadRequest))]
         public async Task<IActionResult> GetProducts([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)

@@ -5,11 +5,11 @@ using System.Security.Claims;
 namespace ProductCatalogSystem.API.Controllers
 {
     [ApiController]
-   // [Authorize]
+    [Authorize]
     public class SecureAPIController : ControllerBase
     {
         public readonly int _userId;
-        public readonly string _fullName;
+        public readonly string? _fullName;
         public SecureAPIController(IHttpContextAccessor httpContext)
         {
             var claims = httpContext.HttpContext.User.Claims.ToList();

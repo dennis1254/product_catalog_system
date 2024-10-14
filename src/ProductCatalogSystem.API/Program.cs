@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using ProductCatalogSystem;
 using ProductCatalogSystem.API;
@@ -34,13 +33,20 @@ builder.Services.AddTransient<IAuthenticationService, AuthenticationService>();
 builder.Services.AddTransient<ITokenService, TokenService>();
 builder.Services.AddTransient<IProductService, ProductService>();
 
-builder.Services.ConfigureSerilog(builder);
+//builder.Services.ConfigureSerilog(builder);
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration) 
+    .CreateLogger();
+
 builder.Services.ConfigureIdentity();
 builder.Services.ConfigureJWT(builder.Configuration);
-builder.Host.UseSerilog((context, services, configuration) => configuration
-.ReadFrom.Configuration(context.Configuration)
-.ReadFrom.Services(services)
-.Enrich.FromLogContext(), writeToProviders: false);
+builder.Host.UseSerilog((context, services, configuration) =>
+{
+    configuration
+        .ReadFrom.Configuration(context.Configuration)
+        .ReadFrom.Services(services)
+        .Enrich.FromLogContext();
+});
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddSwaggerGen(c =>
@@ -61,7 +67,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
@@ -76,7 +83,7 @@ app.UseSerilogRequestLogging(options =>
     options.GetLevel = (httpContext, elapsed, ex) => LogEventLevel.Debug;
     Attach additional properties to the request completion event
     */
-    options.GetLevel = (httpContext, elapsed, ex) => LogEventLevel.Debug;
+  //  options.GetLevel = (httpContext, elapsed, ex) => LogEventLevel.Debug;
     options.EnrichDiagnosticContext = (diagnosticContext, httpContext) =>
     {
         diagnosticContext.Set("RequestHost", httpContext.Request.Host.Value);

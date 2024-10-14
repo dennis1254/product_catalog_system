@@ -13,6 +13,8 @@ C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Azure.Core.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Azure.Identity.dll
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Elastic.Clients.Elasticsearch.dll
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Elastic.Transport.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Elasticsearch.Net.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Fractions.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Hangfire.AspNetCore.dll
@@ -65,7 +67,9 @@ C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Microsoft.Rest.ClientRuntime.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Nest.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\OpenSearch.Net.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Oracle.ManagedDataAccess.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Prometheus.NetCore.dll
@@ -77,12 +81,14 @@ C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Formatting.Elasticsearch.dll
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Formatting.OpenSearch.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Sinks.Console.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Sinks.Elasticsearch.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Sinks.File.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Sinks.Grafana.Loki.dll
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Sinks.OpenSearch.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Sinks.PeriodicBatching.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Serilog.Sinks.Seq.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\SQLitePCLRaw.batteries_v2.dll
@@ -94,6 +100,7 @@ C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\System.DirectoryServices.dll
 C:\Personalbox\product_catalog_system\src\ProductCatalogSystem.API\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
